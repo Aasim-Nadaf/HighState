@@ -1,10 +1,16 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function profile() {
+  const handleLogout = async () => {};
+
   return (
-    <View>
-      <Text>profile</Text>
-    </View>
+    <SafeAreaView className="h-full bg-white">
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerClassName="pb-32 px-7"
+      ></ScrollView>
+    </SafeAreaView>
   );
 }

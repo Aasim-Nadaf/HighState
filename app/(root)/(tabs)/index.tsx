@@ -1,13 +1,11 @@
-import { Link } from "expo-router";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View className="flex-1 items-center justify-center gap-4 bg-white">
-      <Link href={"/explore"}>explore</Link>
-      <Link href={"/profile"}>profile</Link>
-      <Link href={"/signin"}>sign-in</Link>
-      <Link href={"/properties/1"}>properties</Link>
+      <Text className="font-semibold my-10 font-rubik text-3xl">
+        Welcome to HighState
+      </Text>
     </View>
   );
 }
