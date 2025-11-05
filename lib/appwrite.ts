@@ -1,11 +1,22 @@
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
-import { Account, Avatars, Client, OAuthProvider } from "react-native-appwrite";
+import {
+  Account,
+  Avatars,
+  Client,
+  Databases,
+  OAuthProvider,
+} from "react-native-appwrite";
 
 export const config = {
   platform: "com.highstate",
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
+  databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID,
+  galariesId: process.env.EXPO_PUBLIC_APPWRITE_GALARY_ID,
+  reviewsId: process.env.EXPO_PUBLIC_APPWRITE_REVIEW_ID,
+  agentsId: process.env.EXPO_PUBLIC_APPWRITE_AGENT_ID,
+  propertyId: process.env.EXPO_PUBLIC_APPWRITE_PROPERTY_ID,
 };
 
 export const client = new Client();
@@ -17,6 +28,7 @@ client
 
 export const avatar = new Avatars(client);
 export const account = new Account(client);
+export const databases = new Databases(client);
 
 export async function login() {
   try {
